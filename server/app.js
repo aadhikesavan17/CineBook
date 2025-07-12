@@ -17,14 +17,21 @@ const db = mysql.createConnection({
   database: "movieapp"
 }); */
 
-const db = mysql.createConnection({
+/*const db = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 3306
-});
+});*/
 
+const db = mysql.createConnection({
+  host: b4v5gaaefoxigewykysq-mysql.services.clever-cloud.com,
+  user: uuyvlekeykmdbhnm,
+  password: rHGMiv08xAhDplrwOQnZ,
+  database: b4v5gaaefoxigewykysq,
+  port: 3306
+});
 
 db.connect(err => {
   if (err) throw err;
