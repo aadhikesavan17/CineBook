@@ -2,7 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import mysql from "mysql2";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 const port = 3000;
 
@@ -23,15 +25,25 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 3306
-});*/
+});
 
 const db = mysql.createConnection({
-  host: b4v5gaaefoxigewykysq-mysql.services.clever-cloud.com,
+  DB_HOST=b4v5gaaefoxigewykysq-mysql.services.clever-cloud.com
+  //host: b4v5gaaefoxigewykysq-mysql.services.clever-cloud.com,
   user: uuyvlekeykmdbhnm,
   password: rHGMiv08xAhDplrwOQnZ,
   database: b4v5gaaefoxigewykysq,
   port: 3306
+}); */
+
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT || 3306
 });
+
 
 db.connect(err => {
   if (err) throw err;
