@@ -1,0 +1,31 @@
+.payment-page {
+  background: #1c1c1c;
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.payment-options {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.payment-options label {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #ff4444;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
