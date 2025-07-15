@@ -16,6 +16,7 @@ function PaymentPage() {
       return;
     }
 
+    console.log("📦 Sending payload:", payload);
     try {
       const response = await fetch("https://cinebook-3.onrender.com/booking", {
         method: "POST",
@@ -32,6 +33,7 @@ function PaymentPage() {
       });
 
       const data = await response.json();
+      console.log("📥 Response from server:", data);
 
       if (data.success) {
       navigate("/confirmation", {
