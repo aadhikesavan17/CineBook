@@ -41,16 +41,13 @@ app.post("/booking", (req, res) => {
     (err, result) => {
       if (err) {
         console.error("DB error:", err);
-        return res.status(500).send({ success: false, message : "DB error" });
+        return res.status(500).send({ success: false});
       }
       res.send({ success: true, bookingId: result.insertId });
     }
   );
 });
 
-app.get("/", (req, res) => {
-  res.send("🎬 CineBook Backend is Live");
-});
 
 
 //Server listening 
