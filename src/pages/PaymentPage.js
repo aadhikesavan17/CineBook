@@ -16,9 +16,8 @@ function PaymentPage() {
       return;
     }
 
-    console.log("📦 Sending payload:", payload);
     try {
-      const response = await fetch("https://cinebook-3.onrender.com/booking", {
+      const response = await fetch("https://cinebook4.onrender.com/booking", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
